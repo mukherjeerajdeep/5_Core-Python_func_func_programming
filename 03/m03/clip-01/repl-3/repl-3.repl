@@ -1,4 +1,5 @@
-...     v = length                                                              
+>>>def hypervolume(length, *length)
+...     v = length
 ...     for item in lengths:                                                    
 ...         v *= item                                                           
 ...     return v                                                                

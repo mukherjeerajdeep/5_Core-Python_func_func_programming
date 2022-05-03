@@ -1,4 +1,5 @@
-...     return len(str(x))                                                      
+>>>def len_of_number(x, /)
+...     return len(str(x))
 ...                                                                             
 >>> number_length(2112)                                                         
 4                                                                               

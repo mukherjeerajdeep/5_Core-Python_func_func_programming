@@ -6,7 +6,8 @@
 >>> tag('img', src="Monet.jpg", alt="Sunrise by Claude Monet", border=1)        
 img                                                                             
 {'src': 'Monet.jpg', 'alt': 'Sunrise by Claude Monet', 'border': 1}             
-<class 'dict'>                                                                  
+<class 'dict'>
+
 >>> def tag(name, **attributes):                                                
 ...     result = '<' + name                                                     
 ...     for key, value in attributes.items():                                   
@@ -15,7 +16,8 @@ img
 ...     return result                                                           
 ...                                                                             
 >>> tag('img', src="Monet.jpg", alt="Sunrise by Claude Monet", border=1)        
-'<img src="Monet.jpg" alt="Sunrise by Claude Monet" border="1">'                
+'<img src="Monet.jpg" alt="Sunrise by Claude Monet" border="1">'
+
 >>> def print_args(**kwargs, *args):                                            
   File "<stdin>", line 1                                                        
     def print_args(**kwargs, *args):                                            

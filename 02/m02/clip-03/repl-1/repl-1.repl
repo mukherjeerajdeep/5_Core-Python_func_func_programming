@@ -1,3 +1,18 @@
 >>> Resolver                                                                    
 <class 'resolver.Resolver'>                                                     
->>> resolve = Resolver()                                                        
+
+
+from resolver import Resolver
+resolve = Resolver()
+resolve
+Out[11]: <resolver.Resolver at 0x28b55d39b10>
+resolve('sixty-north.com')
+Out[12]: '93.93.131.30'
+resolve.__call__('sixty-north.com')
+Out[13]: '93.93.131.30'
+resolve._cache
+Out[14]: {'sixty-north.com': '93.93.131.30'}
+resolve('pluralsight.com')
+Out[15]: '54.203.101.68'
+resolve._cache
+Out[16]: {'sixty-north.com': '93.93.131.30', 'pluralsight.com': '54.203.101.68'}
