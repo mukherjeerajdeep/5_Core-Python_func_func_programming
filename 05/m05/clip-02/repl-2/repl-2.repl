@@ -1,4 +1,5 @@
-...     def __init__(self):                                                     
+>>>class Trace:
+...     def __init__(self):
 ...         self.enabled = True                                                 
 ...     def __call__(self, f):                                                  
 ...         def wrap(*args, **kwargs):                                          

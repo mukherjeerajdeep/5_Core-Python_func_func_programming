@@ -1,14 +1,12 @@
-...     print(last_letter)                                                      
-...     return sorted(strings, key=last_letter)                                 
+>>> def sort_by_last_letter(strings):
+...     def last_letter(s):
+...        return s[-1]
+...     return sorted(strings, key=last_letter)
 ...                                                                             
 >>> sort_by_last_letter(['ghi', 'def', 'abc'])                                  
 <function sort_by_last_letter.<locals>.last_letter at 0x102f3cd30>              
 ['abc', 'def', 'ghi']                                                           
+>>> sort_by_last_letter(['ghi', 'def', 'abc'])
+<function sort_by_last_letter.<locals>.last_letter at 0x1013250d0> ['abc', 'def', ghi']
 >>> sort_by_last_letter(['ghi', 'def', 'abc'])                                  
-                                              <function sort_by_last_letter.<loc
-als>.last_letter at 0x1013250d0>                                                
-                                ['abc', 'def', ghi']                            
->>> sort_by_last_letter(['ghi', 'def', 'abc'])                                  
-                                              <function sort_by_last_letter.<loc
-als>.last_letter at 0x1013250c8>                                                
-                                ['abc', 'def', ghi']                            
+<function sort_by_last_letter.<locals>.last_letter at 0x1013250c8> ['abc', 'def', ghi']

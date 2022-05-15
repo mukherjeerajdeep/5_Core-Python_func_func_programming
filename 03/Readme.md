@@ -31,8 +31,8 @@ and the number are multiplied as it enters into the method.
 
 ```python
 >>> def hypervolume(*lengths):                                                  
-...     i = iter(lengths)                                                       
-...     v = next(i)                                                             
+...     i = iter(lengths)   <<< Iterate over the tuple                                                      
+...     v = next(i)         <<< find the next element from the tuple                                                   
 ...     for length in i:                                                        
 ...         v *= length                                                         
 ...     return v                    
@@ -113,7 +113,7 @@ Here with some meaningful names, check that the `.format()` also can take the ke
 >>> tag('img', src="Monet.jpg", alt="Sunrise by Claude Monet", border=1)        
 '<img src="Monet.jpg" alt="Sunrise by Claude Monet" border="1">' 
 ```                                                             
-It is not permitted. `**kwargs `should always come after the `*args`. 
+##### **It is not permitted**. `**kwargs `should always come after the `*args`. 
 
 ```python
 >>> def print_args(**kwargs, *args):                                            
