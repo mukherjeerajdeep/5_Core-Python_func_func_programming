@@ -230,16 +230,15 @@ hello()
 However, using decorator will ruin this. See below we used the decorator `noop` here.
 
 ```python
->>> def noop(f):                                                                
-...     def noop_wrapper():                                                     
-...         return f()                                                          
-...     return noop_wrapper                                                     
-...                                                                             
->>> @noop                                                                       
-... def hello():                                                                
-...     "Print a well-known message."                                           
-...     print('hello world!')                                                   
-...
+def noop(f):                                                                
+    def noop_wrapper():                                                     
+        return f()                                                          
+    return noop_wrapper                                                     
+                                                                            
+@noop                                                                       
+def hello():                                                                
+    "Print a well-known message."                                           
+    print('hello world!')                                                   
 ```
 Now printing the `hello()` shows the implementation of the `noop` not the `hello`.
 
@@ -309,9 +308,9 @@ hello()
 Here is an example of the multiple decorator as well. Here the hierarchy went two level deeper in nature. The decorator is the check_non_negative which takes the index position however the input for the validator is the function itself.  
 
 ```python
-def check_non_negative(index):                                              
-    def validator(f):                                                       
-        def wrap(*args):                                                    
+def check_non_negative(index):                             
+    def validator(f):
+        def wrap(*args):                                                   
             if args[index] < 0:                                             
                 raise ValueError('Argument {} must be non-negative.'.format(index))      
             return f(*args)                                                 
